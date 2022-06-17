@@ -12,7 +12,9 @@ const CustomCheckBox = ({ label, ...props }) => {
       <Box sx={{ margin: 2 }}>
         <Checkbox {...field} />
         <span>I Accept the terms of services</span>
-        {meta.touched && meta.error ? <div>{meta.error}</div> : null}
+        {meta.touched && meta.error ? (
+          <div class="errortext1">{meta.error}</div>
+        ) : null}
       </Box>
       {/* <label>{label}</label>
       <input {...field} {...props} />

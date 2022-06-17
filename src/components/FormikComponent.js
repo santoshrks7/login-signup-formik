@@ -45,8 +45,12 @@ const FormikComponent = () => {
                 placeholder="please select a job"
               ></CustomSelect>
             </Box>
-            <CustomCheckBox type="checkbox" name="acceptedTos" />
-            <Button type="submit">submit</Button>
+            <Box component="div">
+              <CustomCheckBox type="checkbox" name="acceptedTos" />
+            </Box>
+            <Button type="submit" fullWidth variant="contained">
+              submit
+            </Button>
           </Form>
         )}
       </Formik>

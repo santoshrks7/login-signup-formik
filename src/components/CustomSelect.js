@@ -19,7 +19,9 @@ const CustomSelect = ({ label, ...props }) => {
           <MenuItem value="other">other</MenuItem>
         </Select>
       </FormControl>
-      {meta.touched && meta.error ? <div>{meta.error}</div> : null}
+      {meta.touched && meta.error ? (
+        <div class="errortext1">{meta.error}</div>
+      ) : null}
     </>
   );
 };

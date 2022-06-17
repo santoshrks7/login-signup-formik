@@ -11,7 +11,9 @@ const CustomInput = ({ label, ...props }) => {
     <>
       <Box>
         <TextField label={label} {...field} fullWidth />
-        {meta.touched && meta.error ? <div>{meta.error}</div> : null}
+        {meta.touched && meta.error ? (
+          <div class="errortext1">{meta.error}</div>
+        ) : null}
       </Box>
       {/* <label>{label}</label>
       <input {...field} {...props} />

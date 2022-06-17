@@ -6,10 +6,17 @@ import Box from "@mui/material/Box";
 import FormikComponent from "./components/FormikComponent";
 
 function App() {
-  const [view, setView] = useState("advanced");
+  const [view, setView] = useState("basic");
   return (
     <div className="App">
-      <Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          alignItems: "center",
+        }}
+      >
         <Button variant="outlined" onClick={() => setView("basic")}>
           using useFormik
         </Button>

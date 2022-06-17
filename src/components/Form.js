@@ -47,7 +47,7 @@ const Form = () => {
         />
       </Box>
       {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
+        <div class="errortext">{formik.errors.email}</div>
       ) : null}
       <Box sx={{ display: "flex", alignItems: "flex-end" }}>
         <VisibilityOffIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
@@ -66,7 +66,7 @@ const Form = () => {
         />
       </Box>
       {formik.touched.password && formik.errors.password ? (
-        <div>{formik.errors.password}</div>
+        <div class="errortext">{formik.errors.password}</div>
       ) : null}
       <Box sx={{ display: "flex", alignItems: "flex-end" }}>
         <VisibilityOffIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
@@ -87,7 +87,7 @@ const Form = () => {
         />
       </Box>
       {formik.touched.cnfPassword && formik.errors.cnfPassword ? (
-        <div>{formik.errors.cnfPassword}</div>
+        <div class="errortext">{formik.errors.cnfPassword}</div>
       ) : null}
       <Button
         disabled={formik.isSubmitting}
