@@ -20,13 +20,26 @@ const Form = () => {
   // console.log(formik);
 
   return (
-    <Box component="form" onSubmit={formik.handleSubmit}>
+    <Box
+      component="form"
+      onSubmit={formik.handleSubmit}
+      sx={{
+        width: 400,
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        margin: 3,
+        padding: 2,
+        border: "1px solid aqua",
+      }}
+    >
       <Box sx={{ display: "flex", alignItems: "flex-end" }}>
         <EmailIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
         <TextField
           name="email"
           variant="standard"
           label="email"
+          fullWidth
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.email}
@@ -43,6 +56,7 @@ const Form = () => {
           variant="standard"
           label="password"
           type="password"
+          fullWidth
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.password}
@@ -59,8 +73,9 @@ const Form = () => {
         <TextField
           name="cnfPassword"
           variant="standard"
-          label="cnfPassword"
+          label="confirm password"
           type="password"
+          fullWidth
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.cnfPassword}

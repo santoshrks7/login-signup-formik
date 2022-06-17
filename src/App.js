@@ -17,7 +17,16 @@ function App() {
           using Formik Component
         </Button>
       </Box>
-      <Box>{view === "basic" ? <Form /> : <FormikComponent />}</Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        {view === "basic" ? <Form /> : <FormikComponent />}
+      </Box>
     </div>
   );
 }

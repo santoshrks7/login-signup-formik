@@ -1,16 +1,17 @@
 import React from "react";
 import { useField } from "formik";
-import { Box, TextField } from "@mui/material/";
+import { Box, Checkbox } from "@mui/material/";
 
-const CustomInput = ({ label, ...props }) => {
+const CustomCheckBox = ({ label, ...props }) => {
   //   console.log({ label, ...props });
   const [field, meta] = useField(props);
   console.log("field", field);
   console.log("meta", meta);
   return (
     <>
-      <Box>
-        <TextField label={label} {...field} fullWidth />
+      <Box sx={{ margin: 2 }}>
+        <Checkbox {...field} />
+        <span>I Accept the terms of services</span>
         {meta.touched && meta.error ? <div>{meta.error}</div> : null}
       </Box>
       {/* <label>{label}</label>
@@ -20,4 +21,4 @@ const CustomInput = ({ label, ...props }) => {
   );
 };
 
-export default CustomInput;
+export default CustomCheckBox;
